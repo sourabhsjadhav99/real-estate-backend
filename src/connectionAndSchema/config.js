@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
-let url = "mongodb://localhost:27017/RealEstateCatalog";
+let url = process.env.MONGO_URL;
+
+
 mongoose
   .connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
